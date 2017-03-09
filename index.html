@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var number = prompt('Укажите число, которое Вы хотите возвести в степень!');
+    var degree = prompt('Укажите степень, в какую Вы хотите возвести ранее введенное число!');
+    function pow(a, n) {
+      if(n === 0){
+        return 1
+      }
+      else {
+        if (n < 0) {
+          a = 1.0 / a
+          n = -n
+        }
+        var res = 1
+        while (n>0){
+          res = res*a
+          n = n-1
+        }
+        return res
+      }
+    }
+    console.log(pow(number,degree))
+  </script>
+</head>
+<body>
+
+</body>
+</html>
